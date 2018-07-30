@@ -29,16 +29,16 @@ public class App {
 
     public static void main(String[] args) {
         Scanner  scanner = new Scanner(System.in);
-        List<Processor> result = new ArrayList<>();
-        result.add(new FilterProcessor(2));
-        result.add(new MultipleProcessor(2));
-        result.add(new PlusProcessor(2));
-        result.add(new DivProcessor(2));
-        System.out.print( new App(result).generateArray(scanner.nextLine()));
+//        List<Processor> result = new ArrayList<>();
+//        result.add(new FilterProcessor(2));
+//        result.add(new MultipleProcessor(2));
+//        result.add(new PlusProcessor(2));
+//        result.add(new DivProcessor(2));
+//        System.out.print( new App(result).generateArray(scanner.nextLine()));
 
-//        XmlBeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("context.xml"));
-//        App app = beanFactory.getBean(App.class);
-//        System.out.print(app.generateArray(scanner.nextLine()));
+        XmlBeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("context.xml"));
+        App app = beanFactory.getBean(App.class);
+        System.out.print(app.generateArray(scanner.nextLine()));
 
     }
 }

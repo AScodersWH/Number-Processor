@@ -19,10 +19,10 @@ public class AppTest{
         MultipleProcessor multipleProcessor = new MultipleProcessor(2);
         FilterProcessor filterProcessor = new FilterProcessor(3);
         List<Processor> pro = new ArrayList<>();
-        pro.add(plusProcessor);
-        pro.add(multipleProcessor);
         pro.add(filterProcessor);
-        assertThat(new App(pro) .generateArray("1 2 3 4"),is(("8 10")));
+        pro.add(multipleProcessor);
+        pro.add(plusProcessor);
+        assertThat(new App(pro) .generateArray("1 2 3 4"),is(("4 6 10")));
 
     }
 }
